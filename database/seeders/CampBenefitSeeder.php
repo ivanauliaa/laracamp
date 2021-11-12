@@ -80,6 +80,12 @@ class CampBenefitSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s', time()),
                 'updated_at' => date('Y-m-d H:i:s', time()),
                 'camp_id' => 2
+            ],
+            [
+                'name' => 'Future Job Opportunity',
+                'created_at' => date('Y-m-d H:i:s', time()),
+                'updated_at' => date('Y-m-d H:i:s', time()),
+                'camp_id' => 2
             ]
         ];
 
