@@ -34,8 +34,8 @@
                                     <strong>${{ $checkout->camp->price }}</strong>
                                 </td>
                                 <td>
-                                    @if ($checkout->status === 'SUCCESS')
-                                        <strong class="text-success">Success</strong>
+                                    @if ($checkout->status === 'PAID')
+                                        <strong class="text-success">PAID</strong>
                                     @else
                                         <strong>Waiting for Payment</strong>
                                     @endif
