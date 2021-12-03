@@ -64,6 +64,29 @@ services:
       MYSQL_ROOT_PASSWORD: 12345
     networks:
       - laravel
+  
+  composer:
+    image: composer:2.0.12
+    container_name: laracamp-composer
+    working_dir: /var/www/html
+    command: install
+    volumes: 
+      - ./:/var/www/html
+    networks:
+      - laravel
+
+  node:
+    build:
+      context: .
+      dockerfile: node-dockerfile
+    container_name: laracamp-node
+    volumes:
+      - ./:/var/www/html
+    tty: true
+    stdin_open: true
+    working_dir: /var/www/html
+    networks:
+      - laravel
 
 networks:
   laravel:
